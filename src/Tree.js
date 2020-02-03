@@ -35,7 +35,6 @@ export default class extends React.Component {
       data,
       width,
       height,
-      events = false,
       margin = {
         top: 50,
         left: 30,
@@ -108,7 +107,6 @@ export default class extends React.Component {
             <option value="step">step</option>
             <option value="curve">curve</option>
             <option value="line">line</option>
-            <option value="elbow">elbow</option>
           </select>
 
           <label>step:</label>
@@ -166,7 +164,7 @@ export default class extends React.Component {
                       root={root}
                       size={[sizeWidth, sizeHeight]}
                       separation={(a, b) =>
-                        (a.parent == b.parent ? 0.5 : 0.75) / a.depth
+                        (a.parent === b.parent ? 0.5 : 0.75) / a.depth
                       }
                     >
                       {({ data }) => (

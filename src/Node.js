@@ -1,10 +1,8 @@
 import React, { Fragment } from "react";
-import { Group } from "@vx/group";
 
 function Node({ node, onClick }) {
   const width = 40;
   const height = 20;
-  console.log(node);
 
   if (node.depth === 0) {
     return null;

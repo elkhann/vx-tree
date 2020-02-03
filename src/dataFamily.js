@@ -1,19 +1,20 @@
 export default {
   name: "",
+  id: 10000,
   isExpanded: true,
   children: [
     {
-      name: "J A",
+      name: "GrandPa",
       id: 1,
-      gender: "Female",
-      hasParnter: true,
-      imageUrl: "/avatar/gravator.jpg"
+      gender: "Male",
+      hasParnter: true
     },
     {
-      name: "Mr. J A",
+      name: "GrandMa",
       id: 2,
       partnerId: 1,
       noParent: true,
+      gender: "Female",
       children: [
         {
           name: "P A",
@@ -36,7 +37,7 @@ export default {
             },
             {
               name: "D MM",
-              id: 1022,
+              id: 101,
               partnerId: 100,
               gender: "Female",
               noParent: true,

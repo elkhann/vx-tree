@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 import {
   LinkHorizontal,
@@ -14,7 +14,6 @@ import {
   LinkVerticalLine,
   LinkRadialLine
 } from "@vx/shape";
-import { LinkHorizontalElbow, LinkVerticalElbow } from "./elbow";
 
 function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
   let LinkComponent;
@@ -37,8 +36,6 @@ function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
         LinkComponent = LinkVerticalCurve;
       } else if (linkType === "line") {
         LinkComponent = LinkVerticalLine;
-      } else if (linkType === "elbow") {
-        LinkComponent = LinkVerticalElbow;
       } else {
         LinkComponent = LinkVertical;
       }
@@ -49,8 +46,6 @@ function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
         LinkComponent = LinkHorizontalCurve;
       } else if (linkType === "line") {
         LinkComponent = LinkHorizontalLine;
-      } else if (linkType === "elbow") {
-        LinkComponent = LinkHorizontalElbow;
       } else {
         LinkComponent = LinkHorizontal;
       }

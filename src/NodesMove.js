@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Group } from "@vx/group";
 import NodeGroup from "react-move/NodeGroup";
 
 import Node from "./Node";
 import { findCollapsedParent, getTopLeft } from "./utils";
-import { render } from "react-dom";
 
 function Nodes({ nodes, layout, orientation, onNodeClick }) {
   return (
@@ -56,8 +55,6 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
       {nodes => (
         <Group>
           {nodes.map(({ key, data: node, state }) => {
-            const width = 40;
-            const height = 20;
             return (
               <Group
                 top={state.top}
